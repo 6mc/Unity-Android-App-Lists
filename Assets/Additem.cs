@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
+using System.IO;  
+using System;
 using UnityEngine.UI;
+using System.Linq;
 
 
 
@@ -63,7 +67,27 @@ salam[5]= text5;
 salam[6]= text6;
 salam[7]= text7;
 
+
 }
+
+
+public  void save()
+{string vesselam="Köpekler-";
+
+for (int i = 0; i < 7; i++)
+        {
+
+if(salam[i].activeInHierarchy)
+vesselam = vesselam + obez[i].text+",";
+
+
+                    }
+
+
+System.IO.File.WriteAllText("armando.txt", vesselam);
+}
+
+
 
 public void Undo()
 {
