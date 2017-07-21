@@ -26,6 +26,9 @@ public GameObject Element6;
 public GameObject Element7;
 public GameObject Element8;
 
+public Text kruze;
+
+
 public void create()
 {
 
@@ -35,7 +38,7 @@ public void create()
 }
 
 
-void	denada()
+public void	denada()
 	{GameObject[] ojb = new GameObject[50];
 		Text[] txt = new Text[50];
 
@@ -80,7 +83,7 @@ None.text= "No List Found";
 	{
 		
 
-string[] lists = text.Split('.');
+string[] lists = text.Split(';');
 
 //string[] names= lists[0].Split('-');
 
@@ -100,14 +103,75 @@ txt[i].text=names[0];
 
 	}
 
+}
+
+	
+
+public void show(int Seligman)
+{
+
+GameObject[] ojb = new GameObject[50];
+		Text[] txt = new Text[50];
+
+txt[0]=None;
+txt[1]=None1;
+txt[2]=None2;
+txt[3]=None3;
+txt[4]=None4;
+txt[5]=None5;
+txt[6]=None6;
+txt[7]=None7;
+txt[8]=None8;
+
+ojb[0]= Element1;	
+ojb[1]= Element2;
+ojb[2]= Element3;
+ojb[3]= Element4;
+ojb[4]= Element5;
+ojb[5]= Element6;
+ojb[6]= Element7;
+ojb[7]= Element8;
 
 
-	}
+
+string taxt = System.IO.File.ReadAllText("armando.txt");
+
+
+string[] lists = taxt.Split(';');
+
+//for (int i = 0; i < lists.Count(); i++)
+     //{
+                 string[] names= lists[Seligman].Split('-');
+
+                // if(i>0)
+                // ojb[i-1].SetActive(true);
+
+string[] titanic = names[1].Split(',');    
+
+
+//for
+ //  txt[0].text= titanic[0];             }
+	
+for (int a = 0; a < titanic.Count(); a++)
+{
+
+if(a!=0 && a!=1)
+ojb[a-2].SetActive(true);
+ 
+ txt[a].text= titanic[a]; 
+
+}
+}
+
+
+
+public void Restart()
+{
 
 
 
 
-
+}
 
 	// Use this for initialization
 	void Start () {

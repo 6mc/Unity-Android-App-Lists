@@ -6,7 +6,7 @@ using System.IO;
 using System;
 using UnityEngine.UI;
 using System.Linq;
-
+using UnityEditor;
 
 
 public class Additem : MonoBehaviour {
@@ -36,6 +36,7 @@ public Text first5;
 public Text first6;
 public Text first7;
 
+public Text googy;
 
 
 
@@ -71,8 +72,34 @@ salam[7]= text7;
 }
 
 
-public  void save()
-{string vesselam="Köpekler-";
+public void show()
+{
+
+
+
+	
+}
+
+public int aeas=0;
+
+public  void save(GameObject Ardo)
+{
+
+if (aeas==0)
+{Ardo.SetActive(true);
+
+aeas++;
+
+
+	
+}
+else
+{
+
+
+
+string vesselam=";"+googy.text+"-";
+
 
 for (int i = 0; i < 7; i++)
         {
@@ -84,8 +111,13 @@ vesselam = vesselam + obez[i].text+",";
                     }
 
 
-System.IO.File.WriteAllText("armando.txt", vesselam);
-}
+System.IO.File.AppendAllText("armando.txt", vesselam);
+
+
+EditorUtility.DisplayDialog("Success", "Items Saved", "Ok");
+Application.LoadLevel("main");
+
+}}
 
 
 
