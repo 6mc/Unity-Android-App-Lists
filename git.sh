@@ -1,3 +1,3 @@
 git add *
-git commit -m "day-5"
+git commit -m "delete all button"
 git push -u origin master

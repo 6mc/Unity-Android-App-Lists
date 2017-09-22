@@ -65,7 +65,7 @@ public void create()
 
 
 
-	System.IO.File.WriteAllText("armando.txt", "");
+	System.IO.File.WriteAllText(Application.persistentDataPath+"armando.txt", "");
 }
 
 
@@ -74,7 +74,7 @@ public void create()
 		//string path = "C:\table.txt";
 		//	Load(path);
 
-		string text = System.IO.File.ReadAllText("armando.txt");
+		string text = System.IO.File.ReadAllText(Application.persistentDataPath+"armando.txt");
 	//	Console.Write (text);
 	//	Debug.Log (text);
 	

@@ -34,7 +34,7 @@ public void create()
 
 
 
-	System.IO.File.WriteAllText("armando.txt", "");
+	System.IO.File.WriteAllText(Application.persistentDataPath+"armando.txt", "");
 }
 
 
@@ -72,7 +72,7 @@ ojb[i].SetActive(false);
 
 
 
-		string text = System.IO.File.ReadAllText("armando.txt");
+		string text = System.IO.File.ReadAllText(Application.persistentDataPath+"armando.txt");
 
 	
 if(text=="")
@@ -105,6 +105,27 @@ txt[i].text=names[0];
 
 }
 
+public  void deleteall()
+{
+
+
+
+
+
+
+
+
+
+
+System.IO.File.WriteAllText(Application.persistentDataPath+"armando.txt", "");
+//EditorUtility.DisplayDialog("Success", "Items Saved", "Ok");
+Application.LoadLevel("main");
+
+}
+
+
+
+
 	
 
 public void show(int Seligman)
@@ -134,7 +155,7 @@ ojb[7]= Element8;
 
 
 
-string taxt = System.IO.File.ReadAllText("armando.txt");
+string taxt = System.IO.File.ReadAllText(Application.persistentDataPath+"armando.txt");
 
 
 string[] lists = taxt.Split(';');

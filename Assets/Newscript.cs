@@ -6,7 +6,7 @@ using System.IO;
 using System;
 using UnityEngine.UI;
 using System.Linq;
-using UnityEditor;
+//using UnityEditor;
 
 
 public class Newscript : MonoBehaviour {

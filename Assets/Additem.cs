@@ -6,7 +6,7 @@ using System.IO;
 using System;
 using UnityEngine.UI;
 using System.Linq;
-using UnityEditor;
+//using UnityEditor;
 
 
 public class Additem : MonoBehaviour {
@@ -111,10 +111,10 @@ vesselam = vesselam + obez[i].text+",";
                     }
 
 
-System.IO.File.AppendAllText("armando.txt", vesselam);
+System.IO.File.AppendAllText(Application.persistentDataPath+"armando.txt", vesselam);
 
-
-EditorUtility.DisplayDialog("Success", "Items Saved", "Ok");
+//System.IO.File.WriteAllText(Application.persistentDataPath+"armando.txt", "kelam");
+//EditorUtility.DisplayDialog("Success", "Items Saved", "Ok");
 Application.LoadLevel("main");
 
 }}
